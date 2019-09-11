@@ -10,7 +10,7 @@ with open('README.md', encoding='utf-8') as f:
 requirements = [x.strip() for x in open("requirements.txt").readlines()]
 
 setup(
-    name="torchsat",
+    name="actions-demo",
     version=version,
     author="sshuair",
     author_email="sshuair@gmail.com",

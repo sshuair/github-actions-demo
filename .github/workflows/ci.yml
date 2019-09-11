@@ -21,7 +21,6 @@ jobs:
       run: |
         pip3 install pytest setuptools wheel twine
         pip3 install -r requirements.txt
-        twine upload --repository-url https://test.pypi.org/legacy/ dist/*
         
     - name: run test
       run: |
@@ -30,4 +29,4 @@ jobs:
     - name: build wheels
       run: |
         python3 setup.py sdist bdist_wheel
-        twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+        python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*

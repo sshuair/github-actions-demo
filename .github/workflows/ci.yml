@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7]
+        python-version: [3.6]
     
     steps:
     - name: Checkout
@@ -19,14 +19,14 @@ jobs:
 
     - name: install requirements
       run: |
-        pip install -r requirements.txt
-        pip install pytest
+        pip3 install -r requirements.txt
+        pip3 install pytest
 
     - name: run test
       run: |
-        python -m pytest tests
+        python3 -m pytest tests
 
     - name: build wheels
       run: |
-        python setup.py sdist bdist_wheel
+        python3 setup.py sdist bdist_wheel
         twine upload --repository-url https://test.pypi.org/legacy/ dist/*

@@ -19,9 +19,9 @@ jobs:
 
     - name: install requirements
       run: |
+        pip3 install pytest setuptools
         pip3 install -r requirements.txt
-        pip3 install pytest
-
+        
     - name: run test
       run: |
         python3 -m pytest tests

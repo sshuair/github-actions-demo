@@ -29,4 +29,4 @@ jobs:
     - name: build wheels
       run: |
         python3 setup.py sdist bdist_wheel
-        python3 -m twine upload -u ["PYPI_USERNAME"] -p ["PYPI_PASSWORD"]  -r testpypi dist/*
+        python3 -m twine upload --verbose -u ["PYPI_USERNAME"] -p ["PYPI_PASSWORD"]  -r testpypi dist/*

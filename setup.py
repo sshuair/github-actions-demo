@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 import re
 
-with open('README.md', encoding='utf-8') as f:
-    readme = f.read()
-
 with open("actions_demo/__init__.py", encoding="utf-8") as f:
     version = re.search(r'__version__ = "(.*?)"', f.read()).group(1)
+
+with open('README.md', encoding='utf-8') as f:
+    readme = f.read()
 
 requirements = [x.strip() for x in open("requirements.txt").readlines()]
 

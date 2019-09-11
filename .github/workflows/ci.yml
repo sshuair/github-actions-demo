@@ -18,8 +18,10 @@ jobs:
         python-version: ${{ matrix.python }}
 
     - name: install requirements
-    - run: pip install -r requirements.txt
-           pip install pytest
+      run: |
+        pip install -r requirements.txt
+        pip install pytest
 
     - name: run test
-    - run: python -m pytest tests
+       run: |
+       python -m pytest tests
